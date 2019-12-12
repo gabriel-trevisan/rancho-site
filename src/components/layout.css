@@ -619,3 +619,19 @@ pre tt:after {
     font-size: 100%;
   }
 }
+@media only screen and (max-width: 768px) {
+  header.HeaderImg-headerImg-106 {
+    height: 250px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  header.HeaderImg-headerImg-106 {
+    height: 100px;
+  }
+
+  h1.HeaderImg-tituloPrincipal-107{
+    margin-top: 10px;
+    margin-left: 15px;
+  }
+  
+}
