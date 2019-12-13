@@ -3,54 +3,69 @@ import { withStyles } from '@material-ui/core/styles';
 import backgroundImg from "../images/slice.png"
 
 const styles = theme => ({
-  root: {
-    flexGrow: 1,
-  },
-  menuButton: {
-    marginRight: theme.spacing(2),
-  },
-  title: {
-    flexGrow: 1,
-  },
   headerImg:{
     width: "100%",
-    height: "500px",
+    height: "250px",
     backgroundImage: `url(${backgroundImg})`,
     backgroundRepeat: "no-repeat", 
     backgroundSize: "cover",
-    backgroundPosition: "center"
+    backgroundPosition: "center",
+    ['@media only screen and (min-width: 768px)']: {
+        height: "500px"
+    }
   }, 
-  tituloPrincipal: {
+  title: {
       textTransform: "uppercase",
-      marginTop: "125px",
-      marginLeft: "35px",
-      fontSize: "4vw",
-      marginBottom: 0
+      textAlign: "right",
+      marginBottom: 0,
+      fontSize: "3em",
+      ['@media only screen and (max-width: 1024px)']: {
+        fontSize: "2.25em",
+      },
+      ['@media only screen and (max-width: 500px)']: {
+        fontSize: "1.5em",
+      }
     },
-  subTitulo: {
+  subTitle: {
     textTransform: "uppercase",
-    marginLeft: "260px",
-    fontSize: "1vw",
+    textAlign: "right",
+    marginTop: 0,
+    fontSize: "1em",
+    ['@media only screen and (max-width: 500px)']: {
+      fontSize: "0.6em",
+    }
+  },
+  containerTitle: {
+    marginTop: "60px",
+    width: "50vw",
+    ['@media only screen and (max-width: 1024px)']: {
+      width: "50vw",
+    },
+    ['@media only screen and (max-width: 768px)']: {
+      width: "65vw",
+    },
+    ['@media only screen and (max-width: 500px)']: {
+      width: "75vw",
+    }
+  },
+  properties:{
+    fontSize: "100%"
   }
 });
 
 class HeaderImg extends Component{
-
-  constructor(props){
-    super(props)
-
-    this.states = {
-      value: 0
-    }
-  }
 
   render(){
     const { classes } = this.props;
 
     return(
       <header className={classes.headerImg}>
-        <h1 className={classes.tituloPrincipal}>Rancho do Arguile</h1>
-        <p  className={classes.subTitulo}>Essências e acessórios para arguiles</p>
+        <div className={classes.containerTitle}>
+          <div className={classes.properties}>
+            <h1 className={classes.title}>Rancho do Arguile</h1>
+            <p  className={classes.subTitle}>Essências e acessórios para arguiles</p>
+          </div>
+        </div>
       </header>
     );
   }

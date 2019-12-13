@@ -1,0 +1,66 @@
+import React, { Component } from "react"
+import { withStyles } from '@material-ui/core/styles';
+import { Container } from '@material-ui/core';
+import WhatsAppIcon from '@material-ui/icons/WhatsApp';
+import MailOutlineIcon from '@material-ui/icons/MailOutline';
+
+const styles = theme => ({
+    content:{
+        width: "100%",
+        height: "100%",
+        backgroundColor: "#000000",
+        color: "#fff"
+    },
+    propertiesTitle:{
+        textTransform: "uppercase",
+        fontSize: "2em",
+        display: "inline"
+    },
+    subtitle:{
+        textTransform: "uppercase",
+        fontSize: "0.6em",
+        marginTop: 0,
+        marginBottom: 0,
+        marginLeft: "72px"
+    },
+    wrap:{
+        paddingTop: "50px",
+        paddingBottom: "50px"
+    }, 
+    span:{
+        height: "20px",
+        width: "10px",
+        backgroundColor: "#FF0000",
+        display: "inline-block",
+        marginRight: "5px"
+    },
+    conteudo:{
+        marginTop: "50px",
+        textAlign: "justify"
+    }
+});
+
+class Lounge extends Component{
+
+  render(){
+    const { classes } = this.props;
+
+    return(
+      <section className={classes.content}>
+          <div className={classes.wrap}>
+            <Container fixed>
+                <span className={classes.span}></span>
+                <h2 className={classes.propertiesTitle}>Lounge</h2>
+                <h5 className={classes.subtitle}>#issoérancho</h5>
+                <div className={classes.conteudo}>
+                    <Container maxWidth="sm">
+                    </Container>
+                </div>
+            </Container>
+          </div>
+      </section>
+    );
+  }
+}
+
+export default withStyles(styles)(Lounge)
