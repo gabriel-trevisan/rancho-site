@@ -53,7 +53,7 @@ class AboutUs extends Component{
     const { classes } = this.props;
 
     return(
-      <section className={classes.content}>
+      <section className={classes.content} id="sobrenos">
           <div className={classes.wrap}>
             <Container fixed>
                 <span className={classes.span}></span><h2 className={classes.propertiesTitle}>Sobre nós</h2>

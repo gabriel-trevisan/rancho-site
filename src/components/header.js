@@ -11,6 +11,7 @@ import HeaderImg from '../components/headerImg';
 const styles = theme => ({
   root: {
     flexGrow: 1,
+    width: '100%'
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -20,6 +21,9 @@ const styles = theme => ({
   },
   header:{
     backgroundColor: '#000000'
+  },
+  nav:{
+    flexWrap: "wrap"
   }
 });
 
@@ -30,12 +34,21 @@ function a11yProps(index) {
   };
 }
 
+function LinkTab(props) {
+  return (
+    <Tab
+      component="a"
+      {...props}
+    />
+  );
+}
+
 class Header extends Component{
 
   constructor(props){
     super(props)
 
-    this.states = {
+    this.state = {
       value: 0
     }
   }
@@ -52,18 +65,17 @@ class Header extends Component{
 
     return(
       <AppBar position="static" className={classes.header}>
-        <Toolbar component="nav">
+        <Toolbar component="nav" className={classes.nav}>
           <Typography variant="h6" className={classes.title}>
             <Link to='/' className={classes.link}>
               <img width={40} src={logo} alt="" />
             </Link>
           </Typography>
-          <Tabs value={this.states.value} onChange={this.handleChange} aria-label="simple tabs example">
-            <Tab label="HOME" {...a11yProps(0)} />
-            <Tab label="SOBRE NÓS" {...a11yProps(1)} />
-            <Tab label="ATACADO" {...a11yProps(2)} />
-            <Tab label="LOUNGE" {...a11yProps(3)} />
-            <Tab label="CONTATO" {...a11yProps(4)} />
+          <Tabs value={this.state.value} onChange={this.handleChange} variant="scrollable" scrollButtons="auto">
+            <LinkTab label="HOME" href="#main" {...a11yProps(0)} />
+            <LinkTab label="SOBRE NÓS" href="#sobrenos" {...a11yProps(1)} />
+            <LinkTab label="ATACADO" href="#atacado" {...a11yProps(2)} />
+            <LinkTab label="LOUNGE" href="#lounge" {...a11yProps(3)} />
           </Tabs>
         </Toolbar>
         <HeaderImg></HeaderImg>

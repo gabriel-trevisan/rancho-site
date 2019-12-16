@@ -59,14 +59,14 @@ class HeaderImg extends Component{
     const { classes } = this.props;
 
     return(
-      <header className={classes.headerImg}>
-        <div className={classes.containerTitle}>
-          <div className={classes.properties}>
-            <h1 className={classes.title}>Rancho do Arguile</h1>
-            <p  className={classes.subTitle}>Essências e acessórios para arguiles</p>
+        <header className={classes.headerImg}>
+          <div className={classes.containerTitle}>
+            <div className={classes.properties}>
+              <h1 className={classes.title}>Rancho do Arguile</h1>
+              <p  className={classes.subTitle}>Essências e acessórios para arguiles</p>
+            </div>
           </div>
-        </div>
-      </header>
+        </header>
     );
   }
 }
