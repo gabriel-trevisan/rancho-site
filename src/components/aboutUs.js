@@ -59,8 +59,9 @@ class AboutUs extends Component{
                 <span className={classes.span}></span><h2 className={classes.propertiesTitle}>Sobre nós</h2>
                 <div className={classes.conteudo}>
                     <p>Fundado em 26 de Maio de 2018, o Rancho do Arguile traz uma proposta de Lounge, Bar e Tabacaria para os amantes do Arguile na Cidade de Campinas e Região, SP.</p>
-                    <p>Atualmente, o Rancho do Arguile tem o maior lounge da cidade de Campinas. Seu lounge, oferece estrutura para eventos com DJs de Funk e Eletrônico.</p>
-                    <p>Quer saber mais sobre nós e eventos? Siga-nos em nossas redes socias.</p>
+                    <p>Atualmente, o Rancho do Arguile tem o maior lounge da cidade de Campinas e oferece estrutura para eventos com DJs de Funk e Eletrônico.</p>
+                    <p>Quer saber mais sobre nós e eventos? </p> 
+                    <p>Siga-nos em nossas redes socias.</p>
                 </div>
                 <Grid item xs={12} container direction="row" justify="center" alignItems="center">
                     <a className={[classes.social, classes.socialInstagram].join(" ")} href="https://www.instagram.com/ranchodoarguile/" target="_blank"><InstagramIcon style={{ fontSize: 64 }}></InstagramIcon></a>

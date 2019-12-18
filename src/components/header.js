@@ -64,22 +64,24 @@ class Header extends Component{
     const logo = require('../images/logo.png');
 
     return(
-      <AppBar position="static" className={classes.header}>
-        <Toolbar component="nav" className={classes.nav}>
-          <Typography variant="h6" className={classes.title}>
-            <Link to='/' className={classes.link}>
-              <img width={40} src={logo} alt="" />
-            </Link>
-          </Typography>
-          <Tabs value={this.state.value} onChange={this.handleChange} variant="scrollable" scrollButtons="auto">
-            <LinkTab label="HOME" href="#main" {...a11yProps(0)} />
-            <LinkTab label="SOBRE NÓS" href="#sobrenos" {...a11yProps(1)} />
-            <LinkTab label="ATACADO" href="#atacado" {...a11yProps(2)} />
-            <LinkTab label="LOUNGE" href="#lounge" {...a11yProps(3)} />
-          </Tabs>
-        </Toolbar>
+      <React.Fragment>
+        <AppBar position="fixed" className={classes.header}>
+          <Toolbar component="nav" className={classes.nav}>
+            <Typography variant="h6" className={classes.title}>
+              <Link to='/' className={classes.link}>
+                <img width={40} src={logo} alt="" />
+              </Link>
+            </Typography>
+            <Tabs value={this.state.value} onChange={this.handleChange} variant="scrollable" scrollButtons="auto">
+              <LinkTab label="HOME" href="#main" {...a11yProps(0)} />
+              <LinkTab label="SOBRE NÓS" href="#sobrenos" {...a11yProps(1)} />
+              <LinkTab label="ATACADO" href="#atacado" {...a11yProps(2)} />
+              <LinkTab label="LOUNGE" href="#lounge" {...a11yProps(3)} />
+            </Tabs>
+          </Toolbar>
+        </AppBar>
         <HeaderImg></HeaderImg>
-      </AppBar>
+      </React.Fragment>
     );
   }
 }

@@ -36,7 +36,8 @@ const styles = theme => ({
     }
   },
   containerTitle: {
-    marginTop: "60px",
+    color: "#fff",
+    paddingTop: "80px",
     width: "50vw",
     ['@media only screen and (max-width: 1024px)']: {
       width: "50vw",
@@ -46,6 +47,7 @@ const styles = theme => ({
     },
     ['@media only screen and (max-width: 500px)']: {
       width: "75vw",
+      paddingTop: "100px"
     }
   },
   properties:{
