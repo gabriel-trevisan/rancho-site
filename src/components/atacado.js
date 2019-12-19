@@ -63,9 +63,14 @@ class Atacado extends Component{
                 <span className={classes.span}></span><h2 className={classes.propertiesTitle}>ATACADO</h2>
                 <div className={classes.conteudo}>
                 <p>O Rancho do Arguile oferece essências, carvões e acessórios para arguiles em atacado.</p>
-                <p>Para mais informações de atacado para arguiles na Região de Campinas, SP. Consulte nossa equipe:</p>
-                <p><Button variant="contained" className={classes.wpp}><WhatsAppIcon style={{fontSize: "1rem", paddingRight: "3px"}}></WhatsAppIcon>Converse com nós</Button></p>
-                <p><MailOutlineIcon style={{fontSize: "1rem"}}></MailOutlineIcon> E-mail: comercial@ranchodoarguile.com</p>
+                <p>Para mais informações de atacado para arguiles na Região de Campinas, SP.</p>
+                <p>Consulte nossa equipe:</p>
+                <p>
+                    <Button variant="contained" className={classes.wpp} type="submit" rel="noopener" target="_blank" href="https://api.whatsapp.com/send?phone=5519995057737&text=Oi%2C%20eu%20tenho%20interesse%20no%20produto%20de%20voc%C3%AAs&source=&data=">
+                        <WhatsAppIcon style={{fontSize: "1rem", paddingRight: "3px"}}></WhatsAppIcon>Converse com nós
+                    </Button>
+                </p>
+                <p><MailOutlineIcon style={{fontSize: "1rem", marginRight: "3px"}}></MailOutlineIcon><a href = "mailto: comercial@ranchodoarguile.com">comercial@ranchodoarguile.com</a></p>
                 </div>
             </Container>
           </div>

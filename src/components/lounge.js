@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import { withStyles } from '@material-ui/core/styles';
 import { Container } from '@material-ui/core';
+import { Grid } from '@material-ui/core';
 
 const styles = theme => ({
     content:{
@@ -35,6 +36,12 @@ const styles = theme => ({
     conteudo:{
         marginTop: "50px",
         textAlign: "justify"
+    },
+    videoContainer:{
+        ['@media only screen and (max-width: 425px)']: {
+            width: "300px",
+            height: "300px"
+        }
     }
 });
 
@@ -51,8 +58,12 @@ class Lounge extends Component{
                 <h2 className={classes.propertiesTitle}>Lounge</h2>
                 <h5 className={classes.subtitle}>#issoérancho</h5>
                 <div className={classes.conteudo}>
-                    <Container maxWidth="sm">
-                    </Container>
+                    <Grid item xs={12} container direction="row" justify="center" alignItems="center">
+                        <div>
+                            <iframe className={classes.videoContainer} src="https://www.youtube.com/embed/5358uaTe6mY" width="552" height="300" frameborder="0" allowfullscreen="allowfullscreen">
+                            </iframe>
+                        </div>
+                    </Grid>    
                 </div>
             </Container>
           </div>
