@@ -64,8 +64,8 @@ class AboutUs extends Component{
                     <p>Siga-nos em nossas redes socias.</p>
                 </div>
                 <Grid item xs={12} container direction="row" justify="center" alignItems="center">
-                    <a className={[classes.social, classes.socialInstagram].join(" ")} href="https://www.instagram.com/ranchodoarguile/" target="_blank"><InstagramIcon style={{ fontSize: 64 }}></InstagramIcon></a>
-                    <a className={[classes.social, classes.socialFacebook].join(" ")} href="https://www.facebook.com/ranchodoarguile/" target="_blank"><FacebookIcon  style={{ fontSize: 64 }}></FacebookIcon></a>
+                    <a className={[classes.social, classes.socialInstagram].join(" ")} href="https://www.instagram.com/ranchodoarguile/" target="_blank" rel="noopener"><InstagramIcon style={{ fontSize: 64 }}></InstagramIcon></a>
+                    <a className={[classes.social, classes.socialFacebook].join(" ")} href="https://www.facebook.com/ranchodoarguile/" target="_blank"rel="noopener"><FacebookIcon  style={{ fontSize: 64 }}></FacebookIcon></a>
                 </Grid>
             </Container>
           </div>
