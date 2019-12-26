@@ -60,7 +60,7 @@ class Lounge extends Component{
                 <div className={classes.conteudo}>
                     <Grid item xs={12} container direction="row" justify="center" alignItems="center">
                         <div>
-                            <iframe className={classes.videoContainer} src="https://www.youtube.com/embed/5358uaTe6mY" width="552" height="300" frameborder="0" allowfullscreen="allowfullscreen">
+                            <iframe className={classes.videoContainer} title="Vídeo do Rancho do Arguile" src="https://www.youtube.com/embed/5358uaTe6mY" width="552" height="300" frameBorder="0" allowFullScreen="allowfullscreen">
                             </iframe>
                         </div>
                     </Grid>    

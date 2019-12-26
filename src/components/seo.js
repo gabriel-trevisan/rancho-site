@@ -73,9 +73,10 @@ function SEO({ description, lang, meta, title }) {
 }
 
 SEO.defaultProps = {
-  lang: `en`,
+  lang: `pt-br`,
   meta: [],
-  description: ``,
+  title: `Rancho do Arguile`,
+  description: `Site da empresa Rancho do Arguile.`,
 }
 
 SEO.propTypes = {
