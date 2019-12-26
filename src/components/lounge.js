@@ -23,8 +23,8 @@ const styles = theme => ({
         marginLeft: "72px"
     },
     wrap:{
-        paddingTop: "50px",
-        paddingBottom: "50px"
+        paddingTop: "70px",
+        paddingBottom: "70px"
     }, 
     span:{
         height: "20px",

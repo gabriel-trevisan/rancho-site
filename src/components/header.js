@@ -59,6 +59,23 @@ class Header extends Component{
     });
   };
 
+  componentDidMount(){
+    window.addEventListener('scroll', this.handleScroll);
+  }
+
+  handleScroll = () => {
+    const y = window.scrollY;
+    if(y < 500){ //Home
+      this.handleChange(null, 0);
+    } else if(y >= 500 && y < 931){ //Sobre Nós
+      this.handleChange(null, 1);
+    } else if(y >= 931 && y < 1308){ //Atacado
+      this.handleChange(null, 2);
+    } else if(y >= 1308){ //Lounge
+      this.handleChange(null, 3);
+    }
+  }
+
   render(){
     const { classes } = this.props;
     const logo = require('../images/logo.png');
