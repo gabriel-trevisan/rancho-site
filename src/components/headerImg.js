@@ -47,7 +47,7 @@ const styles = theme => ({
     },
     ['@media only screen and (max-width: 500px)']: {
       width: "75vw",
-      paddingTop: "100px"
+      paddingTop: "120px"
     }
   },
   properties:{

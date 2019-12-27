@@ -65,14 +65,19 @@ class Header extends Component{
 
   handleScroll = () => {
     const y = window.scrollY;
-    if(y < 500){ //Home
-      this.handleChange(null, 0);
-    } else if(y >= 500 && y < 931){ //Sobre Nós
+    const main = document.getElementById("main").getBoundingClientRect().top + window.scrollY;
+    const sobrenos = document.getElementById("sobrenos").getBoundingClientRect().top + window.scrollY;
+    const atacado = document.getElementById("atacado").getBoundingClientRect().top + window.scrollY;
+    const lounge = document.getElementById("lounge").getBoundingClientRect().top + window.scrollY;
+    
+    if(y >= sobrenos && y < atacado){ //Sobre Nós
       this.handleChange(null, 1);
-    } else if(y >= 931 && y < 1308){ //Atacado
+    } else if(y >= atacado && y < lounge){ //Atacado
       this.handleChange(null, 2);
-    } else if(y >= 1308){ //Lounge
+    } else if(y >= lounge){ //Lounge
       this.handleChange(null, 3);
+    } else { // Home
+      this.handleChange(null, 0);
     }
   }
 
