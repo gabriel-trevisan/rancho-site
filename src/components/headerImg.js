@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import { withStyles } from '@material-ui/core/styles';
-import backgroundImg from "../images/slice.png"
+import backgroundImg from "../images/slice.jpg"
 
 const styles = theme => ({
   headerImg:{
